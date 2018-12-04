@@ -1,0 +1,17 @@
+{
+  "name": "champignon",
+  "version": "1.0.0",
+  "description": "Champignon chips",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Tester c'est douter\" && exit 1"
+  },
+  "author": "Aurélien Chevalier",
+  "license": "WTFPL",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "pug": "^2.0.3",
+    "redis": "^2.8.0"
+  }
+}

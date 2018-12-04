@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title ISEN Championship
+  body
+    div(id="tn" style={display: 'none'}) #{teamname}
+    h1 Exercice #{n}
+    p !{exercice}
+
+    form(action="/validation" method="post")
+      input(type="hidden" name="teamname" id="teamname")
+      label(for="password") Réponse : 
+      input(type="text" id="password" name="password")
+      button(id="send") Envoyer
+    <script>document.getElementById("teamname").value=document.getElementById("tn").innerHTML </script>
