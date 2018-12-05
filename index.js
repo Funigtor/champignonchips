@@ -8,12 +8,17 @@ const bodyParser = require('body-parser')
 
 const maxExo = fs.readdirSync('exercices/').length
 const homepage = fs.readFileSync('teamname.html', "UTF-8")
+const exo2 = fs.readFileSync('exo2.html', "UTF-8")
 const send_nudes = pug.compileFile("exercice.pug")
 
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.get('/', function (req, res) {
   res.send(homepage)
+})
+
+app.get('/exercices/exo2.html', function(req,res){
+    res.send(exo2)
 })
 
 app.post('/exercice/', function(req,res){

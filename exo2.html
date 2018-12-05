@@ -1,0 +1,25 @@
+<!Doctype html>
+<head>
+    <title>Iframe</title>
+</head>
+<body>
+    <button id="btn">Clique moi</button>
+
+    <script>
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
+        var btn = document.getElementById("btn")
+btn.addEventListener('click', function(event){
+alert("Le mot de passe est sandwich")
+})
+        btn.addEventListener('mousemove', function(event){
+            btn.style.position = "fixed"
+            btn.style.bottom = getRandomInt(600)+"px"
+            btn.style.left = getRandomInt(800)+"px"
+        })
+        
+    </script>
+</body>
+</html>
