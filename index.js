@@ -18,6 +18,15 @@ app.get('/', function (req, res) {
   res.send(homepage)
 })
 
+app.get('/image.png', function(req,res){
+	res.set('Content-Type', 'image/png');
+    res.sendFile("./resultat.png",{root:'.'})
+})
+
+app.get('/exo2.html', function(req,res){
+    res.send(exo2)
+})
+
 app.get('/exercice/image.png', function(req,res){
 	res.set('Content-Type', 'image/png');
     res.sendFile("./resultat.png",{root:'.'})
