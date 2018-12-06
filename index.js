@@ -27,7 +27,7 @@ app.post('/exercice/', function(req,res){
     rank.get(teamname,function(err,reply){
         let teamrank = Number(reply)
         if (teamrank > maxExo){
-            res.send("Épreuve terminée")
+            res.send("<h1>Félicitations ! Vous avez terminé !</h1><p>Merci à Gabriel Chênevert pour son aide à la conception des exercices.</p>")
         } else if (teamrank <= 0){
             res.send("Exercice inconnu")
         } else
