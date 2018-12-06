@@ -9,7 +9,7 @@ const bodyParser = require('body-parser')
 const maxExo = fs.readdirSync('exercices/').length
 const homepage = fs.readFileSync('teamname.html', "UTF-8")
 const exo2 = fs.readFileSync('exo2.html', "UTF-8")
-const image = fs.readFileSync('resultat.png', "UTF-8")
+const image = fs.readFileSync('resultat.png')//, "UTF-8")
 const send_nudes = pug.compileFile("exercice.pug")
 
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -18,11 +18,12 @@ app.get('/', function (req, res) {
   res.send(homepage)
 })
 
-app.get('/image.png', function(req,res){
-	res.send(image)
+app.get('/exercice/image.png', function(req,res){
+	res.set('Content-Type', 'image/png');
+    res.sendFile("./resultat.png",{root:'.'})
 })
 
-app.get('/exercices/exo2.html', function(req,res){
+app.get('/exercice/exo2.html', function(req,res){
     res.send(exo2)
 })
 
@@ -38,6 +39,10 @@ app.post('/exercice/', function(req,res){
         } else
         res.send(send_nudes({n:reply, exercice: exercice[teamrank].question, teamname: teamname}))
     })
+})
+
+app.get('/exercice/', function(req, res){
+    res.redirect('/')
 })
 
 app.post('/validation', function(req,res){
