@@ -1,0 +1,12 @@
+{
+    "question": "La tour de Hanoi est composée de huit disques de tailles différentes et de trois pics en bois.<br>
+    <img src='https://upload.wikimedia.org/wikipedia/commons/0/07/Tower_of_Hanoi.jpeg?uselang=fr' alt = 'Image de la tour de Hanoi'></img>
+    <ul>
+      <li>Les huit disques sont rangés du plus grand au plus petit sur l'un des pics.<li>
+      <li>On ne peut déplacer qu'un disque à la fois.</li>
+      <li>Un disque ne peut aller que sur un disque plus petit.</li>
+    </ul>
+    Combien de déplacement faut-il pour déplacer la tour du pic 1 au pic 3 ?",
+
+    "answer": "255"
+}
